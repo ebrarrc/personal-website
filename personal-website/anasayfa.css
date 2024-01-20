@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #fffee0;
+}
+
+html {
+  font-size: 10px;
+}
+
+.header {
+  background-color: #fffee0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 3rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.square {
+  padding: 1rem 1rem;
+  margin-right: .8rem;
+  background-color: #b87333;
+  animation: square 4s ;
+}
+@keyframes square{  
+ 
+  0% {background-color: #fffee0;
+    transform: rotate(-10deg);}
+  25%  {background-color: #f5deb3;
+    transform: rotate(-40deg);}
+  50%  {background-color: #cfa074;
+  transform: rotate(-700deg);
+  }
+  100% {background-color: #b87333;
+    transform: rotate(-10deg);} 
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.left-section span {
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+
+.right-section {
+  display: flex;
+  justify-content: center;
+  margin-right: 1.5rem;
+  align-items: center;
+  gap: 50px;
+}
+
+.home,
+.resume,
+.contact,
+.projects {
+  margin-right: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.right-section a:hover::after {
+  content: " ";
+  bottom: -2px;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background-color: #b87333;
+  animation: effect .5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes effect{
+  0% {width: 0;}
+  100% {width: 100%;}
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+ 
+}
+
+.left-colour {
+  background-color: #f5deb3;
+  height: 100vh;
+  width: 65rem;
+}
+
+.right-colour {
+  background-color: #fffee0;
+  flex: 1;
+}
+
+.right-section a{
+  position: relative;
+}
+
+.person-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 65vh;
+  width: 60vw;
+  position: absolute;
+  right: 35rem;
+  top: 20rem;
+  box-shadow: 1px 10px 10px 1px rgba(0, 0, 0, 0.05);
+}
+
+.person-info {
+  position: relative;
+  background-color: #cfa074;
+  flex: 1;
+}
+
+.person-about {
+  background-color: #fffee0;
+  flex: 2;
+}
+.person-photo{
+  display: flex;
+  justify-content: center;
+}
+.person-photo img {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  height: 13rem;
+  border-radius: 20px;
+}
+
+.person-name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+
+}
+.line {
+  background-color: #000;
+  height: .1px;
+  width: 5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.person-job {
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 4rem;
+}
+
+.person-exp{
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.person-account {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem 2rem;
+  background-color: #fffee0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.person-account img{
+  height: 2rem;
+  
+}
+.person-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.about-me span{ 
+  font-size: 5rem;
+  margin-left: 6rem;
+
+}
+.about-me p{
+  margin-top: 2.5rem;
+  font-size: 2rem;
+}
+
+
+.buttons{
+  display: flex;
+  gap: 100px;
+  text-align: center;
+}
+
+.resume-button {
+  border: 1px #b87333 solid;
+  color: #b87333;
+  border-radius: 5rem;
+  padding: .5rem;
+  width: 10rem;
+  font-size: 15px;
+}
+
+.resume-button:hover , .resume-button a:hover{
+  background-color:#b87333;
+  color: white;
+  transition: background-color 0.15s;
+}
+
+.projects-button {
+  background-color: #b87333;
+  color: white;
+  border: 1px #b87333 solid;
+  border-radius: 50px;
+  padding: .5rem;
+  width: 10rem;
+  font-size: 15px;
+}
+
+.projects-button:hover , .projects-button a:hover{
+  background-color: #fffee0;
+  color: #b87333;
+  transition: background-color 0.15s;
+}
+
+.explanation{
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
